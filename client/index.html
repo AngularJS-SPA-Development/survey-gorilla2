@@ -1,0 +1,148 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-desktop.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-desktop.min.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-android.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-android.min.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-ios.css" />
+      <link rel="stylesheet" href="bower_components/bootcards/dist/css/bootcards-ios.min.css" />
+      <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+      <link rel="stylesheet" href="app/app.css">
+      <!-- injector:css -->
+      <link rel="stylesheet" href="app/account/login/login.css">
+      <link rel="stylesheet" href="app/admin/admin.css">
+      <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/dashboard/dashboard.css">
+      <link rel="stylesheet" href="components/app/bootstrap-theme/bootwatch-simplex.css">
+      <!-- endinjector -->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="surveyGorillaApp">
+    <!--[if lt IE 7]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <navbar></navbar>
+    <div ui-view=""></div>
+    <footer></footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+      <script src="bower_components/noty/js/noty/packaged/jquery.noty.packaged.js"></script>
+      <script src="bower_components/jStorage/jstorage.js"></script>
+      <script src="bower_components/numeral/numeral.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/restangular/dist/restangular.js"></script>
+      <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+      <script src="bower_components/bowser/src/bowser.js"></script>
+      <script src="bower_components/angular-gettext-sg/dist/angular-gettext.js"></script>
+      <script src="bower_components/fastclick/lib/fastclick.js"></script>
+      <script src="bower_components/bootcards/dist/js/bootcards.js"></script>
+      <script src="bower_components/respond/dest/respond.src.js"></script>
+      <script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
+      <!-- endbower -->
+      <script src="socket.io-client/socket.io.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(.tmp) app/app.js -->
+    <script src="components/base/sg.base.js"></script>
+    <script src="components/app/sg.app.js"></script>
+    <script src="components/app/translation/sg.translation.module.js"></script>
+    <script src="components/app/message/sg.message.module.js"></script>
+    <script src="app/app.js"></script>
+
+      <script src="app/account/account.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/admin/admin.controller.js"></script>
+      <script src="app/admin/admin.js"></script>
+      <script src="app/app.constant.js"></script>
+      <script src="app/card/card-condition.service.js"></script>
+      <script src="app/card/card.controller.js"></script>
+      <script src="app/card/card.directive.js"></script>
+      <script src="app/card/cards.js"></script>
+      <script src="app/card/cards.service.js"></script>
+      <script src="app/card/create/create-card.controller.js"></script>
+      <script src="app/card/respond/respond-member.controller.js"></script>
+      <script src="app/card/type/notice/notice-card.controller.js"></script>
+      <script src="app/card/type/objective/objective-card.controller.js"></script>
+      <script src="app/card/type/rating/rating-card.controller.js"></script>
+      <script src="app/card/type/rating/rating-result.directive.js"></script>
+      <script src="app/card/type/rating/rating.directive.js"></script>
+      <script src="app/dashboard/dashboard.controller.js"></script>
+      <script src="app/dashboard/dashboard.js"></script>
+      <script src="app/dashboard/member/group-member.directive.js"></script>
+      <script src="app/group/create/create-group.controller.js"></script>
+      <script src="app/group/groups.js"></script>
+      <script src="app/group/groups.service.js"></script>
+      <script src="app/group/list/group-card.directive.js"></script>
+      <script src="app/group/read/read-group.controller.js"></script>
+      <script src="app/main/main.controller.js"></script>
+      <script src="app/main/main.js"></script>
+      <script src="components/app/auth/auth.controller.js"></script>
+      <script src="components/app/auth/auth.service.js"></script>
+      <script src="components/app/auth/user.service.js"></script>
+      <script src="components/app/file/file-uploader.service.js"></script>
+      <script src="components/app/file/photo-profile.directive.js"></script>
+      <script src="components/app/message/sg.message.js"></script>
+      <script src="components/app/mongoose-error/mongoose-error.directive.js"></script>
+      <script src="components/app/navbar/navbar.controller.js"></script>
+      <script src="components/app/sgAlert/sgAlert.service.js"></script>
+      <script src="components/app/sgHttpInterceptor/sgHttpInterceptor.factory.js"></script>
+      <script src="components/app/socket/socket.mock.js"></script>
+      <script src="components/app/socket/socket.service.js"></script>
+      <script src="components/app/translation/sg.translation.js"></script>
+      <script src="components/base/directives/sg-enter/sg-enter.directive.js"></script>
+      <script src="components/base/directives/sg-select-on-click/sg-select-on-click.directive.js"></script>
+      <script src="components/base/modal/modal.service.js"></script>
+      <script src="components/base/services/logger-service.js"></script>
+      <script src="components/base/services/pubsub.service.js"></script>
+      <script src="components/base/services/sg-date/sg-date.service.js"></script>
+      <script src="components/base/services/sg-formatter/sg-formatter.service.js"></script>
+      <script src="components/base/services/template-cache.service.js"></script>
+      <script src="components/base/storage/storage.service.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
