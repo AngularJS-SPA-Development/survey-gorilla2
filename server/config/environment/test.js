@@ -5,6 +5,16 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/surveygorilla-test'
+    uri: 'mongodb://localhost/surveygorilla2-test'
+  },
+  sequelize: {
+    uri: 'sqlite://',
+    options: {
+      logging: false,
+      storage: 'test.sqlite',
+      define: {
+        timestamps: false
+      }
+    }
   }
 };

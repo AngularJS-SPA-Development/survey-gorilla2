@@ -3,9 +3,13 @@
 // Development specific configuration
 // ==================================
 module.exports = {
-  // MongoDB connection options
-  mongo: {
-    uri: 'mongodb://localhost/surveygorilla-dev'
-  }
-  //, seedDB: true
+
+    // MongoDB connection options
+    mongo: {
+        uri: 'mongodb://localhost/surveygorilla2-dev'
+    },
+
+    // Seed database on startup
+    seedDB: false
+
 };

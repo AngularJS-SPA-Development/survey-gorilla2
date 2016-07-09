@@ -48,7 +48,8 @@ function create(params) {
   }
   newUser.save(function(err, user) {
     if (err) return deferred.reject(err);
-    var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*24*365 });
+    // var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*24*365 });
+    var token = jwt.sign({_id: user._id }, config.secrets.session);
     user.authToken = token;
     deferred.resolve(user);
   });
